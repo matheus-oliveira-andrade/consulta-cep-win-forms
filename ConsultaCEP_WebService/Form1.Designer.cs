@@ -40,8 +40,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtCEP = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,15 +158,6 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Estado: ";
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(91, 18);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.maskedTextBox1.Mask = "99,999-999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(132, 23);
-            this.maskedTextBox1.TabIndex = 4;
-            // 
             // button1
             // 
             this.button1.BackgroundImage = global::ConsultaCEP_WebService.Properties.Resources.clear;
@@ -178,13 +169,21 @@
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // txtCEP
+            // 
+            this.txtCEP.Location = new System.Drawing.Point(91, 18);
+            this.txtCEP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(132, 23);
+            this.txtCEP.TabIndex = 6;
+            // 
             // FrmConsultaCEP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 290);
+            this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.label1);
@@ -192,6 +191,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmConsultaCEP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta CEP";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -214,8 +214,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtCEP;
     }
 }
 

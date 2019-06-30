@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using ConsultaCEP_WebService.AtendeClienteService;
 
@@ -18,18 +19,31 @@ namespace ConsultaCEP_WebService
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            
-            using (AtendeClienteClient ws = new AtendeClienteClient())
+            if (string.IsNullOrEmpty(txtCEP.Text))
             {
-                // Consulta
-                enderecoERP endereco = ws.consultaCEP(maskedTextBox1.Text.Trim());
+                MessageBox.Show("Informe o CEP", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    using (AtendeClienteClient ws = new AtendeClienteClient())
+                    {
+                        // Consulta
+                        enderecoERP endereco = ws.consultaCEP(txtCEP.Text.Trim());
 
-                groupBox1.Visible = true;
+                        groupBox1.Visible = true;
 
-                txtRua.Text = endereco.end;
-                txtBairro.Text = endereco.bairro;
-                txtCidade.Text = endereco.cidade;
-                txtEstado.Text = endereco.uf;
+                        txtRua.Text = endereco.end;
+                        txtBairro.Text = endereco.bairro;
+                        txtCidade.Text = endereco.cidade;
+                        txtEstado.Text = endereco.uf;
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
