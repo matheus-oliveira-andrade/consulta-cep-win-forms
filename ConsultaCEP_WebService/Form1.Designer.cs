@@ -40,7 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.txtCEP = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -151,23 +151,24 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 173);
+            this.label5.Location = new System.Drawing.Point(16, 173);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Estado: ";
+            this.label5.Text = "Estado:";
             // 
-            // button1
+            // btnLimpar
             // 
-            this.button1.BackgroundImage = global::ConsultaCEP_WebService.Properties.Resources.clear;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(386, 8);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 43);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLimpar.BackgroundImage = global::ConsultaCEP_WebService.Properties.Resources.clear;
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimpar.Location = new System.Drawing.Point(386, 8);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(52, 43);
+            this.btnLimpar.TabIndex = 5;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // txtCEP
             // 
@@ -183,7 +184,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 290);
             this.Controls.Add(this.txtCEP);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.label1);
@@ -193,7 +194,6 @@
             this.Name = "FrmConsultaCEP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta CEP";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -214,7 +214,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.TextBox txtCEP;
     }
 }

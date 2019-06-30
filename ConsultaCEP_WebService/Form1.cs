@@ -12,11 +12,6 @@ namespace ConsultaCEP_WebService
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtCEP.Text))
@@ -30,14 +25,14 @@ namespace ConsultaCEP_WebService
                     using (AtendeClienteClient ws = new AtendeClienteClient())
                     {
                         // Consulta
-                        enderecoERP endereco = ws.consultaCEP(txtCEP.Text.Trim());
+                        enderecoERP endereco = ws.consultaCEP(txtCEP.Text.Trim());                        
 
-                        groupBox1.Visible = true;
-
-                        txtRua.Text = endereco.end;
+                        txtRua.Text    = endereco.end;
                         txtBairro.Text = endereco.bairro;
                         txtCidade.Text = endereco.cidade;
                         txtEstado.Text = endereco.uf;
+
+                        groupBox1.Visible = true;
                     }
                 }
                 catch (System.Exception ex)
@@ -45,6 +40,16 @@ namespace ConsultaCEP_WebService
                     MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = false;
+
+            txtRua.Text    = string.Empty;
+            txtBairro.Text = string.Empty;
+            txtCidade.Text = string.Empty;
+            txtEstado.Text = string.Empty;
         }
     }
 }
