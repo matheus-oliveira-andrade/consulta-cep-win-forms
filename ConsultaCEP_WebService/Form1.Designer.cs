@@ -1,6 +1,6 @@
 ﻿namespace ConsultaCEP_WebService
 {
-    partial class Form1
+    partial class FrmConsultaCEP
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaCEP));
             this.label1 = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -41,6 +41,7 @@
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,13 +57,14 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(335, 8);
+            this.btnConsultar.Location = new System.Drawing.Point(278, 8);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(100, 43);
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // groupBox1
             // 
@@ -82,6 +84,7 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resultado:";
+            this.groupBox1.Visible = false;
             // 
             // txtRua
             // 
@@ -159,16 +162,28 @@
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(91, 18);
             this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.maskedTextBox1.Mask = "99.999-999";
+            this.maskedTextBox1.Mask = "99,999-999";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(132, 23);
             this.maskedTextBox1.TabIndex = 4;
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ConsultaCEP_WebService.Properties.Resources.clear;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Location = new System.Drawing.Point(386, 8);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 43);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // FrmConsultaCEP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 290);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnConsultar);
@@ -176,7 +191,7 @@
             this.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
+            this.Name = "FrmConsultaCEP";
             this.Text = "Consulta CEP";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -200,6 +215,7 @@
         private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
