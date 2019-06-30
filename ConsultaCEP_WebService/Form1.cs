@@ -12,8 +12,10 @@ namespace ConsultaCEP_WebService
             InitializeComponent();
         }
 
+        // Efetua a consulta do CEP e Atribui o resultado aos componentes
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            // Verifica se o campo do CEP esta vazio
             if (string.IsNullOrEmpty(txtCEP.Text))
             {
                 MessageBox.Show("Informe o CEP", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -24,7 +26,7 @@ namespace ConsultaCEP_WebService
                 {
                     using (AtendeClienteClient ws = new AtendeClienteClient())
                     {
-                        // Consulta
+                        // Efetua a consulta
                         enderecoERP endereco = ws.consultaCEP(txtCEP.Text.Trim());                        
 
                         txtRua.Text    = endereco.end;
@@ -41,15 +43,15 @@ namespace ConsultaCEP_WebService
                 }
             }
         }
-
+        // Limpa os componentes
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
-
             txtRua.Text    = string.Empty;
             txtBairro.Text = string.Empty;
             txtCidade.Text = string.Empty;
             txtEstado.Text = string.Empty;
+
+            groupBox1.Visible = false;
         }
     }
 }

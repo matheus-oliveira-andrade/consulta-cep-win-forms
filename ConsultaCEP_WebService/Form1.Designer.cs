@@ -91,7 +91,7 @@
             this.txtRua.Location = new System.Drawing.Point(76, 36);
             this.txtRua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(132, 23);
+            this.txtRua.Size = new System.Drawing.Size(236, 23);
             this.txtRua.TabIndex = 3;
             // 
             // label2
@@ -109,7 +109,7 @@
             this.txtBairro.Location = new System.Drawing.Point(76, 81);
             this.txtBairro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(132, 23);
+            this.txtBairro.Size = new System.Drawing.Size(236, 23);
             this.txtBairro.TabIndex = 5;
             // 
             // label3
@@ -127,7 +127,7 @@
             this.txtCidade.Location = new System.Drawing.Point(76, 124);
             this.txtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(132, 23);
+            this.txtCidade.Size = new System.Drawing.Size(236, 23);
             this.txtCidade.TabIndex = 7;
             // 
             // label4
@@ -145,7 +145,7 @@
             this.txtEstado.Location = new System.Drawing.Point(76, 170);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(132, 23);
+            this.txtEstado.Size = new System.Drawing.Size(236, 23);
             this.txtEstado.TabIndex = 9;
             // 
             // label5
@@ -189,6 +189,7 @@
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmConsultaCEP";
